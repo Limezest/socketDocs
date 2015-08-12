@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>socketDocs</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet" type="text/css">
+
+		<noscript>
+		  <style type="text/css">
+		      .container {display:none;}
+		  </style>
+		  <div class="noscriptmsg">
+		  	<center>Before continuing, <br/>
+					I gotta tell you this site will work better with Javascript enabled.</center>
+		  </div>
+		</noscript>
+	</head>
+
+	<body class="jumbotron">
+			<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-10 col-md-offset-1 col-xs-10 col-sm-10 col-sm-offset-1 column table-responsive noselect">
+						<table class="table" id="alignment-selector">
+							<thead class="">
+								<tr>
+									<th scope="row" class="text-container">
+										<button style="display: block; width: 100%;" class="btn-primary btn" id="left"><i class="glyphicon glyphicon-align-left"></i></button>
+									</th>
+									<th scope="row" class="text-center">
+										<button style="display: block; width: 100%;" class="btn-primary btn" id="center"><i class="glyphicon glyphicon-align-center"></i></button>
+									</th>
+									<th scope="row" class="text-right">
+										<button style="display: block; width: 100%;" class="btn-primary btn" id="right"><i class="glyphicon glyphicon-align-right"></i></button>
+									</th>
+									<th scope="row" class="font-less">
+										<button style="display: block; width: 100%;" class="btn-primary btn" id="font-less"><i class="glyphicon glyphicon-font"></i></button>
+									</th>
+									<th scope="row" class="font-more">
+										<button style="display: block; width: 100%;" class="btn-primary btn" id="font-more"><i class="glyphicon glyphicon-font"></i></button>
+									</th>
+								</tr>
+							</thead>
+						</table>
+						<table class="table table-striped table-bordered table-hover" id="table">
+							<thead class="table-bordered" id="thead">
+								<tr>
+									<th scope="row column" class="text-center">#</th>
+									<th class="text-center">A</th>
+									<th class="text-center">B</th>
+									<th class="text-center">C</th>
+								</tr>
+							</thead>
+							<tbody id="tbody">
+								<tr class="">
+									<th scope="row" class="index text-center">0</th>
+									<td contenteditable="true" id="0A" class"text-center"></td>
+									<td contenteditable="true" id="0B" class"text-center"></td>
+									<td contenteditable="true" id="0C" class"text-center"></td>
+								</tr>
+								<tr class="">
+									<th scope="row" class="index text-center">1</th>
+									<td contenteditable="true" id="1A" class"text-center"></td>
+									<td contenteditable="true" id="1B" class"text-center"></td>
+									<td contenteditable="true" id="1C" class"text-center"></td>
+								</tr>
+								<tr class="">
+									<th scope="row" class="index text-center">2</th>
+									<td contenteditable="true" id="2A" class"text-center"></td>
+									<td contenteditable="true" id="2B" class"text-center"></td>
+									<td contenteditable="true" id="2C" class"text-center"></td>
+								</tr>
+								<tr class="">
+									<th scope="row" class="index text-center">3</th>
+									<td contenteditable="true" id="3A" class"text-center"></td>
+									<td contenteditable="true" id="3B" class"text-center"></td>
+									<td contenteditable="true" id="3C" class"text-center"></td>
+								</tr>
+								<tr class="">
+									<th scope="row" class="index text-center">4</th>
+									<td contenteditable="true" id="4A" class"text-center"></td>
+									<td contenteditable="true" id="4B" class"text-center"></td>
+									<td contenteditable="true" id="4C" class"text-center"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="well col-md-10 col-md-offset-1 col-xs-10 col-sm-10 col-sm-offset-1 column table-responsive">
+				<div id="user-container"></div>
+					<ul id="user-list">
+					</ul>
+				</div>
+			</div>
+
+			<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+			<script src="https://cdn.socket.io/socket.io-1.3.2.js"></script>
+			<script src="script.js"></script>
+	</body>
+</html>
