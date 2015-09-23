@@ -47,7 +47,7 @@ var cellValues = [];
 */
 
 io.sockets.on('connection', function(socket) {
-//  Assigns the users a random name and push it in the server-side user list
+//  Assigns the users a random name and picture, then pushes it in the server-side user list
 	var sockID = socket.id;
 	var user = {
 		name: faker.name.firstName(),
@@ -55,11 +55,11 @@ io.sockets.on('connection', function(socket) {
 	};
 	users.push(user);
 
-
 	//  Updates the client-side user list
 	socket.broadcast.emit('user:changeBroadcast', users);
 	socket.emit('user:changeBroadcast', users);
 	console.log(users);
+
 
 	//  Sends the user the current values for the cells
 	socket.emit('cell:loadEmit', cellValues);
@@ -87,4 +87,4 @@ io.sockets.on('connection', function(socket) {
 	});
 });
 
-server.listen(8080);
+server.listen(80);
